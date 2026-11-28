@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import openmc
 
-# Materials
+# selected materials
 fuel = openmc.Material(name='UO2')
 fuel.add_element('U', 1.0, enrichment=3.5)
 fuel.add_element('O', 2.0)
@@ -21,13 +21,13 @@ water.add_s_alpha_beta('c_H_in_H2O')
 materials = openmc.Materials([fuel, clad, water])
 materials.export_to_xml()
 
-# Pin radii [cm]
+# radiuses [cm]
 r_fuel = 0.41
 r_clad = 0.475
 fuel_cyl = openmc.ZCylinder(r=r_fuel)
 clad_cyl = openmc.ZCylinder(r=r_clad)
 
-# Simulation settings (lightweight for parametric sweep)
+# Simulation settings 
 settings = openmc.Settings()
 settings.batches = 60
 settings.inactive = 15
