@@ -1,8 +1,7 @@
 # 2D PWR Pin-Cell Moderation Study (OpenMC)
 
-Introductory Monte Carlo eigenvalue calculation (`k_inf`) on a 2D infinite PWR fuel pin-cell using OpenMC.
-
-By varying the square lattice pitch while keeping the UO2 fuel and Zircaloy cladding radii fixed, the script illustrates the transition from under-moderated to over-moderated regimes as a function of the moderator-to-fuel volume ratio (`Vm / Vf`).
+Monte Carlo eigenvalue calculation of the infinite multiplication factor (k-inf) for a 2D PWR fuel pin-cell in OpenMC.
+Holding UO_2 fuel and Zircaloy cladding radiuses fixed, varying the square lattice pitch sweeps the moderator-to-fuel volume ratio (V_m/V_f) across under-moderated and over-moderated regimes.
 
 ![Moderation Curve](moderation_curve.png)
 
